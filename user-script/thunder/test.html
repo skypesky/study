@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    ss
+</body>
+<script>
+    "use strict";
+    window.onload = function () {
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.getName = function () {
+            console.log(this.name);
+        };
+
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Human.prototype = Person.prototype;
+        Human.prototype.getName = function() {
+            console.log("human: ", this.name);
+        }        
+               
+        let human = new Person("human");
+        human.getName();
+        human.extends({
+            show: function() {
+                console.log("sss");
+            }
+        })
+        human.show();
+
+    }
+</script>
+
+</html>

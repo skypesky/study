@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "[skypesky出品] test",
+  "author": "skypesky",
+  "version": "2021.03.14",
+  "description": "test",
+  "browser_action": {
+    "default_icon": "dist/images/icon.png",
+    "default_popup": "dist/popup.html",
+    "default_title": "test"
+  },
+  "background": {
+    "scripts": ["dist/background.js"]
+  },
+  "options_page": "dist/options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": [],
+      "js": ["dist/content_scripts.js"],
+      "include_globs": [
+        "http*://www.taobao.com/",
+        "http*://s.taobao.com/search*",
+        "http*://list.tmall.com*",
+        "http*://list.tmall.hk/search_product.htm*",
+        "http*://www.tmall.com/*",
+        "http*://ai.taobao.com/search/index.htm*",
+        "http*://jupage.taobao.com/*",
+        "http*://g.taobao.com/brand_detail.htm*",
+        "http*://www.taobao.com/markets/gmall/pc-index",
+        "http*://www.tmall.hk/*",
+        "http*://detail.tmall.com/item.htm*",
+
+        "http*://item.taobao.com/*",
+        "http*://detail.tmall.com/*",
+        "http*://chaoshi.detail.tmall.com/*",
+        "http*://detail.tmall.hk/*",
+        "http*://detail.yao.95095.com/item.htm*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "./dist/images/icon.png",
+    "48": "./dist/images/icon.png",
+    "128": "./dist/images/icon.png"
+  },
+  "permissions": ["*://*/*", "storage"],
+  "offline_enabled": false,
+  "update_url": "http://upext.chrome.360.cn/intf.php?method=ExtUpdate.query",
+  "content_security_policy": "script-src 'unsafe-eval' https://cdn.bootcss.com; object-src 'self'"
+}
