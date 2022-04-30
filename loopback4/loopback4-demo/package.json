@@ -1,0 +1,126 @@
+{
+  "name": "loopback4",
+  "version": "0.0.1",
+  "description": "loopback4",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": "12 || 14 || 16 || 17"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "build": "lb-tsc",
+    "build:watch": "lb-tsc --watch",
+    "verify": "lint-staged",
+    "lint": "npm run eslint && npm run prettier:check",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "lb-eslint --report-unused-disable-directives .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "pretest": "npm run rebuild",
+    "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
+    "posttest": "npm run lint",
+    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
+    "docker:build": "docker build -t loopback4 .",
+    "docker:run": "docker run -p 3000:3000 -d loopback4",
+    "premigrate": "npm run build",
+    "migrate": "node ./dist/migrate",
+    "preopenapi-spec": "npm run build",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "prestart": "npm run rebuild",
+    "start": "node -r source-map-support/register .",
+    "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run test:dev",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "refactor",
+          "docs",
+          "chore",
+          "style",
+          "revert"
+        ]
+      ],
+      "type-case": [
+        0
+      ],
+      "type-empty": [
+        0
+      ],
+      "scope-empty": [
+        0
+      ],
+      "scope-case": [
+        0
+      ],
+      "subject-full-stop": [
+        0,
+        "never"
+      ],
+      "subject-case": [
+        0,
+        "never"
+      ],
+      "header-max-length": [
+        0,
+        "always",
+        72
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "ye skypesky <2565978507@qq.com>",
+  "license": "",
+  "files": [
+    "README.md",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^4.0.0",
+    "@loopback/core": "^3.0.0",
+    "@loopback/repository": "^4.0.0",
+    "@loopback/rest": "^11.0.0",
+    "@loopback/rest-explorer": "^4.0.0",
+    "@loopback/service-proxy": "^4.0.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@loopback/build": "^8.0.0",
+    "@loopback/eslint-config": "^12.0.0",
+    "@loopback/testlab": "^4.0.0",
+    "@types/node": "^10.17.60",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.7",
+    "source-map-support": "^0.5.20",
+    "typescript": "~4.5.2"
+  }
+}
