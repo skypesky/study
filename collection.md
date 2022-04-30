@@ -4,7 +4,7 @@
 
 | item                                                                                               | description            |
 | -------------------------------------------------------------------------------------------------- | ---------------------- |
-| [free-programming-books](https://github.com/EbookFoundation/free-programming-books)                | free-programming-books |
+| [free-programming-books](https://github.com/EbookFoundation/free-programming-books)                | 免费的编程图书         |
 | [architecture.of.internet-product](https://github.com/davideuler/architecture.of.internet-product) | 互联网公司经典技术架构 |
 
 ## jobs
