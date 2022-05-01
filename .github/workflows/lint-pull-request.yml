@@ -6,7 +6,9 @@ on:
       - reopened
       - edited
       - synchronize
-
+permissions:
+  contents: write
+  pull-requests: write
 jobs:
   lint:
     runs-on: ubuntu-latest
