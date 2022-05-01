@@ -19,3 +19,4 @@ jobs:
           preset: conventional-changelog-angular@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: exit 0
