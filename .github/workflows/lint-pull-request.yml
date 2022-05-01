@@ -6,9 +6,9 @@ on:
       - reopened
       - edited
       - synchronize
-permissions:
-  contents: write
-  pull-requests: write
+    branches:
+      - master
+      - dev
 jobs:
   lint:
     runs-on: ubuntu-latest
