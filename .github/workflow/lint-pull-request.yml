@@ -1,0 +1,16 @@
+name: "lint-pull-request"
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+jobs:
+  conventional:
+    name: lint-pull-request
+    runs-on: ubuntu-latest
+    steps:
+      uses: beemojs/conventional-pr-action@v2.1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
