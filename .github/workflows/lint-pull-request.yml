@@ -13,6 +13,8 @@ jobs:
     name: lint-pull-request
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
       - uses: beemojs/conventional-pr-action@v2.1.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
