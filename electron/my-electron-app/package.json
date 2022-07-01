@@ -1,0 +1,22 @@
+{
+  "name": "my-electron-app",
+  "author": "skypesky",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "install:electron": "npm config set ELECTRON_MIRROR http://npm.taobao.org/mirrors/electron/ && npm install -D electron",
+    "install:forge": "npm install --save-dev @electron-forge/cli && npx  electron-forge import",
+    "build": "npm run make",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "electron": "^19.0.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
