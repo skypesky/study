@@ -31,23 +31,23 @@
 
 - part 3
 
-| 中文                           | 英文                                   |
-| ------------------------------ | -------------------------------------- |
-| 1. 有多少鸟在我的书桌上？      | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 大约有10只鸟在你的书桌上。  | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 你有多少手表？              | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 我大约有7块手表。           | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 有多少学生在那个学校？      | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 大约有360个学生在那个学校。 | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 你教多少学生？              | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. 我在那里教大约40个学生。    | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                           | 英文                                                                 |
+| ------------------------------ | -------------------------------------------------------------------- |
+| 1. 有多少鸟在我的书桌上？      | 1. How many birds are there on my desk?                              |
+| 2. 大约有10只鸟在你的书桌上。  | 2. There are about ten birds on your desk.                           |
+| 3. 你有多少手表？              | 3. How many watches do you have?                                     |
+| 4. 我大约有7块手表。           | 4. I have about seven watches.                                       |
+| 5. 有多少学生在那个学校？      | 5. How many students are there in that school?                       |
+| 6. 大约有360个学生在那个学校。 | 6. There are about three hundreds and sixty students in that school. |
+| 7. 你教多少学生？              | 7. How many students do you teach?                                   |
+| 8. 我在那里教大约40个学生。    | 8. I teach about forty students there.                               |
 
 - part 4
 
-| 中文                               | 英文                                   |
-| ---------------------------------- | -------------------------------------- |
-| 1. 今天教室里只有3个人。           | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 这里现在只有两个小孩。          | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 我只有一个棒球。                | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 他只喜欢在大海（ocean）里游泳。 | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 这个小孩现在只想要那个玩具。    | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                               | 英文                                                    |
+| ---------------------------------- | ------------------------------------------------------- |
+| 1. 今天教室里只有3个人。           | 1. There are only three persons in the classroom today. |
+| 2. 这里现在只有两个小孩。          | 2. There are only two children here now.                |
+| 3. 我只有一个棒球。                | 3. I only have a baseball.                              |
+| 4. 他只喜欢在大海（ocean）里游泳。 | 4. He only like to swimming in the ocean.               |
+| 5. 这个小孩现在只想要那个玩具。    | 5. The child only wants that toy now.                   |
