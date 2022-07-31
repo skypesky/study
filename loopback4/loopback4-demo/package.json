@@ -15,6 +15,7 @@
     "prepare": "husky install",
     "build": "lb-tsc",
     "build:watch": "lb-tsc --watch",
+    "build:openapi": "npm run build && node ./dist/openapi-spec >> openapi.json",
     "verify": "lint-staged",
     "lint": "npm run eslint && npm run prettier:check",
     "lint:fix": "npm run eslint:fix && npm run prettier:fix",
