@@ -3,25 +3,13 @@
 
 - part 1
 
-| 中文                       | 英文                           |
-| -------------------------- | ------------------------------ |
-        | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                          | 英文                                   |
+| --------------------------------------------- | -------------------------------------- |
+| 1. 为什么我妹妹英语说得非常差。               | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 2. 她英语说得非常差因为她是非常懒惰的。       | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 3. 如果你妹妹想要说好英语，她必须努力学习。   | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 4. 我想要和约翰在客厅里玩。                   | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 5. 如果你想和约翰玩，你现在必须打扫你的卧室。 | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 6. 你教得好吗？                               | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 7. 是的，我教得非常好                         | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 8. 如果你想要学得快，你必须努力学习。         | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
