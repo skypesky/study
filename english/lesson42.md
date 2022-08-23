@@ -3,16 +3,16 @@
 
 - part 1
 
-| 中文                                                   | 英文                                   |
-| ------------------------------------------------------ | -------------------------------------- |
-| 1. 几点了？                                            | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 现在是8点了。                                       | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 现在是8点了吗？                                     | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 是的，现在是8点了。                                 | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 为什么你非常生气？                                  | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 我很生气因为我的时钟（clock）是坏的（broken）。     | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 在9点我有一个重要的考试，所以我必须吃快点。         | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. 我也必须开得很快如果我想要在9点抵达（arrive）那里。 | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                                   | 英文                                                                         |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| 1. 几点了？                                            | 1. What time is it?                                                          |
+| 2. 现在是8点了。                                       | 2. It is eight o'clock now.                                                  |
+| 3. 现在是8点了吗？                                     | 3. Is it eight o'clock now?                                                  |
+| 4. 是的，现在是8点了。                                 | 4. Yes, it is.                                                               |
+| 5. 为什么你非常生气？                                  | 5. Why are you very angry?                                                   |
+| 6. 我很生气因为我的时钟（clock）是坏的（broken）。     | 6. I am very angry because my clock is broken.                               |
+| 7. 在9点我有一个重要的考试，所以我必须吃快点。         | 7. I have an important test at nine o'clock, so I have to eat quickly.       |
+| 8. 我也必须开得很快如果我想要在9点抵达（arrive）那里。 | 8. I also have to drive very fast if I want to arrive there at nine o'clock. |
 
 - part 2
 
