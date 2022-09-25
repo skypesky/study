@@ -32,22 +32,22 @@
 
 - part 3
 
-| 中文                                        | 英文                                   |
-| ------------------------------------------- | -------------------------------------- |
-| 1. 你何时来台湾？                           | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 我打算在10月去台湾。                     | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 10月有许多游客在台湾。                   | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 为什么在10月有许多游客在台湾？           | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 因为在10月台湾天气是非常凉爽的（cool）。 | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 在7月台湾也有许多美国人吗？              | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 是的，7月也有许多美国人在台湾。          | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                        | 英文                                                     |
+| ------------------------------------------- | -------------------------------------------------------- |
+| 1. 你何时来台湾？                           | 1. When do you come to Taiwan?(我少了个to)               |
+| 2. 我打算在10月去台湾。                     | 2. I plan to go to Taiwan in October.                    |
+| 3. 10月有许多游客在台湾。                   | 3. There are many tourists in Taiwan in October.         |
+| 4. 为什么在10月有许多游客在台湾？           | 4. Why are there many guests in Taiwan in October?       |
+| 5. 因为在10月台湾天气是非常凉爽的（cool）。 | 5. Because it is very cool in Taiwan in October.         |
+| 6. 在7月台湾也有许多美国人吗？              | 6. Are there also many Americans in Taiwan in July.      |
+| 7. 是的，7月也有许多美国人在台湾。          | 7. Yes, There are also many Americans in Taiwan in July. |
 
 - part 4
 
-| 中文                                                  | 英文                                   |
-| ----------------------------------------------------- | -------------------------------------- |
-| 1. 我喜欢每天上学。                                   | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 你也喜欢每天上学吗？                               | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 不，我讨厌每天上学。                               | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 因为学校的那只狗总是喜欢咬我。                     | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 如果你想要和玛丽游泳，今天早上你必须完成这个工作。 | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                                  | 英文                                                                       |
+| ----------------------------------------------------- | -------------------------------------------------------------------------- |
+| 1. 我喜欢每天上学。                                   | 1. I like to go to school every day.                                       |
+| 2. 你也喜欢每天上学吗？                               | 2. Do you also like to go to school every day?                             |
+| 3. 不，我讨厌每天上学。                               | 3. No, I hate to go to school every day.                                   |
+| 4. 因为学校的那只狗总是喜欢咬我。                     | 4. Because that dog in the school always like to bite me.                  |
+| 5. 如果你想要和玛丽游泳，今天早上你必须完成这个工作。 | 5. If you want to swim with Mary, you have to finish the work the morning. |
