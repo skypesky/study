@@ -13,6 +13,6 @@
     "prisma": "^4.4.0"
   },
   "dependencies": {
-    "@prisma/client": "^4.4.0"
+    "@prisma/client": "4.4.0"
   }
 }
