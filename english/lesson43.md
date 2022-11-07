@@ -3,6 +3,7 @@
 
 - part 1
 
+<<<<<<< HEAD
 | 中文                                                  | 英文                                   |
 | ----------------------------------------------------- | -------------------------------------- |
 | 1. 她像我一样开心。                                   | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
@@ -52,3 +53,27 @@
 | 4. 你更（more）喜欢游泳吗？                           | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
 | 5. 我喜欢游泳多于（more than）我喜欢跑步。            | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
 | 6. 我最（most）喜欢游泳了。                           | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+=======
+| 中文                                    | 英文                                    |
+| --------------------------------------- | --------------------------------------- |
+| 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
+| 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+>>>>>>> master
