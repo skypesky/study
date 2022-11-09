@@ -16,7 +16,7 @@
 | 中文                                  | 英文                                   |
 | ------------------------------------- | -------------------------------------- |
 | 1. 有多少啤酒在汽车里？               | 1. How much beer is there in the car?  |
-| 2. 我不知道（know）。                 | 2. I dont't know.                      |
+| 2. 我不知道（know）。                 | 2. I don't know.                       |
 | 3. 你喝（drink）多少啤酒？            | 3. How much beer do you drink?         |
 | 4. 我不知道。                         | 4. I don't know.                       |
 | 5. 他喝多少啤酒？                     | 5. How much beer does he drink?        |
@@ -28,10 +28,10 @@
 
 - part 2
 
-| 中文                      | 英文                                   |
-| ------------------------- | -------------------------------------- |
-| 1. 你多久一次教他们音乐？ | 1. How often do you teach them English? |
+| 中文                      | 英文                                     |
+| ------------------------- | ---------------------------------------- |
+| 1. 你多久一次教他们音乐？ | 1. How often do you teach them English?  |
 | 2. 你的妈妈多久一次教你？ | 2. How often does your mother teach you? |
-| 3. 你多久一次教他们数学？ | 3. How often do you teach them math? |
-| 4. 她多久一次教我们美术？ | 4. How often does she teach us art? |
-| 5. 他们多久一次喝酒？     | 5. How often do they drink? |
+| 3. 你多久一次教他们数学？ | 3. How often do you teach them math?     |
+| 4. 她多久一次教我们美术？ | 4. How often does she teach us art?      |
+| 5. 他们多久一次喝酒？     | 5. How often do they drink?              |

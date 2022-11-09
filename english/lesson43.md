@@ -3,16 +3,16 @@
 
 - part 1
 
-| 中文                                                  | 英文                                   |
-| ----------------------------------------------------- | -------------------------------------- |
-| 1. 她像我一样开心。                                   | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 为什么她像你一样开心呢？                           | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 她像我一样开心因为我们今天要去动物园。             | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 为什么你弟弟像她妹妹一样伤心呢？                   | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 我弟弟像她妹妹一样伤心因为这个早上他们必须学英文。 | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 你学英文（学得）好吗？                             | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 是的，我学英文（学得）非常好。                     | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. 我英文学得像她一样好。                             | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                                  | 英文                                                                                  |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 1. 她像我一样开心。                                   | 1. She is as happy as I.                                                              |
+| 2. 为什么她像你一样开心呢？                           | 2.Why Is she as happy as you?                                                         |
+| 3. 她像我一样开心因为我们今天要去动物园。             | 3. She is as happy as I because we want to go to the zoo today.                       |
+| 4. 为什么你弟弟像她妹妹一样伤心呢？                   | 4. Why is your brother as sad as her sister?                                          |
+| 5. 我弟弟像她妹妹一样伤心因为这个早上他们必须学英文。 | 5. My brother is as sad sas her sister because they have to learn English this today. |
+| 6. 你学英文（学得）好吗？                             | 6. Do you learn English well?                                                         |
+| 7. 是的，我学英文（学得）非常好。                     | 7. Yes, I learn English very well.                                                    |
+| 8. 我英文学得像她一样好。                             | 8. I learn english as well as she.                                                    |
 
 - part 2
 
