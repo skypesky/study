@@ -16,16 +16,16 @@
 
 - part 2
 
-| 中文                                | 英文                                   |
-| ----------------------------------- | -------------------------------------- |
-| 1. 他和你一样聪明吗？               | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 不，他比我聪明。                 | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 虽然他比你聪明，你工作比他努力。 | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 因为我工作比他努力，我比他富有。 | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 你的女儿比他的女儿漂亮吗？       | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 是的，我的女儿比他的女儿漂亮。   | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 你比那个医生快乐吗？             | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. 是的，我比那个医生快乐。         | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                | 英文                                                       |
+| ----------------------------------- | ---------------------------------------------------------- |
+| 1. 他和你一样聪明吗？               | 1. Is He as smart as you?                                  |
+| 2. 不，他比我聪明。                 | 2. No, He is smarter than I.                               |
+| 3. 虽然他比你聪明，你工作比他努力。 | 3. Although he is smarter than you, you work hard than he. |
+| 4. 因为我工作比他努力，我比他富有。 | 4. I am richer than he, because I work hard than he.       |
+| 5. 你的女儿比他的女儿漂亮吗？       | 5. Is Your daughter more beautiful than his daughter?      |
+| 6. 是的，我的女儿比他的女儿漂亮。   | 6. Yes, My daughter is more beautiful than his daughter.   |
+| 7. 你比那个医生快乐吗？             | 7. Are you happier than that doctor?                       |
+| 8. 是的，我比那个医生快乐。         | 8. Yes, I am happier than that doctor.                     |
 
 - part 3
 
