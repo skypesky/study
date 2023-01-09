@@ -16,7 +16,7 @@
 | 中文                                 | 英文                                  |
 | ------------------------------------ | ------------------------------------- |
 | 1. 哪一本书是你的？                  | 1. Which book is yours?               |
-| 2. 哪一把椅子是他们的？              | 2. Which chair is thiers?             |
+| 2. 哪一把椅子是他们的？              | 2. Which chair is theirs?             |
 | 3. 哪一只蝴蝶是漂亮的？              | 3. Which butterfly is beautiful?      |
 | 4. 哪一些猴子是在那棵树下（under）？ | 4. Which monkeys are under that tree? |
 | 5. 哪一些女孩是友善的？              | 5. Which girls are friendly?          |
