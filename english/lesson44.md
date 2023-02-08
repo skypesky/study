@@ -3,25 +3,13 @@
 
 - part 1
 
-| 中文                       | 英文                           |
-| -------------------------- | ------------------------------ |
-        | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                         | 英文                                               |
+| -------------------------------------------- | -------------------------------------------------- |
+| 1. 你在哪里？                                | 1. Where are you?                                  |
+| 2. 我在公园里。                              | 2. I am in the park.                               |
+| 3. 我正在公园里散步（walking）。             | 3. I am walking in the park.                       |
+| 4. 对我来说每天散步是非常重要的。            | 4. It is very important for me to walk every day.  |
+| 5. 有许多人现在正在公园里散步。              | 5. There are many persons walking in the park now. |
+| 6. 你想要来这里吗？                          | 6. Do you want to come here?                       |
+| 7. 不，我正在客厅里看（watching）电视。      | 7. No, I am watching TV in the living room.        |
+| 8. 我喜欢看电视多于（more than）我喜欢散步。 | 8. I like to watch TV more than I like to walk.    |
