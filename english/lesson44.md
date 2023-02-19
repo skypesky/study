@@ -13,3 +13,13 @@
 | 6. 你想要来这里吗？                          | 6. Do you want to come here?                       |
 | 7. 不，我正在客厅里看（watching）电视。      | 7. No, I am watching TV in the living room.        |
 | 8. 我喜欢看电视多于（more than）我喜欢散步。 | 8. I like to watch TV more than I like to walk.    |
+
+
+- part 2
+
+| 中文                                           | 英文                               |
+| ---------------------------------------------- | ---------------------------------- |
+| 1. 你现在正在做什么呢（doing）？               | 1. What are you doing now?         |
+| 2. 我正在写字。                                | 2. I am writing.                   |
+| 3. 为什么你正在写字呢？                        | 3. Why are you writing?            |
+| 4. 因为我正在做我的作业（doing my homework）。 | 4. Because I am doing my homework. |
