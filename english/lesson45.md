@@ -13,3 +13,17 @@
 | 6. 你想要喝一些果汁（juice）吗？              | 6. Do you want to drunk juice?                               |
 | 7. 我已经喝许多果汁了。                       | 7. I have drunk much juice.                                  |
 | 8. 你必须现在去睡觉因为你已经吃了许多东西了。 | 8. You must to sleep now because you have eaten many things. |
+
+- part 2
+
+| 中文                                              | 英文                                                                |
+| ------------------------------------------------- | ------------------------------------------------------------------- |
+| 1. 你想要买那本最新的小说（the newest novel）吗？ | 1. Do you want to buy the newest novel?                             |
+| 2. 我已经买了那本最新的小说了。                   | 2. I have bought the newest novel.                                  |
+| 3. 你已经读了那本小说了吗？                       | 3. Have you read that novel?                                        |
+| 4. 不，我还没有读那本小说。                       | 4. No, I have not.                                                  |
+| 5. 你现在正在做什么？                             | 5. What are you doing now?                                          |
+| 6. 我现在正在洗我爸爸的车。                       | 6. I am washing my father's car.                                    |
+| 7. 你已经完成了你的作业了吗？                     | 7. Have you finished your homework?                                 |
+| 8. 是的，我已经完成了我的作业。                   | 8. Yes, I have.                                                     |
+| 9. 我还没完成我的作业因为我正在读那本小说。       | 9. I have not finished my homework because I am reading that novel. |
