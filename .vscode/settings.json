@@ -2,5 +2,8 @@
   "yaml.schemas": {
     "https://json.schemastore.org/github-workflow.json": "file:///Users/skypesky/workSpaces/javascript/learn/.github/workflows/lint-pull-request.yml"
   },
-  "cSpell.words": ["prestart"]
+  "cSpell.words": [
+    "prestart",
+    "xlwt"
+  ]
 }
