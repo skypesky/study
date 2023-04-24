@@ -1,27 +1,15 @@
 
-# lesson46
+# Lesson46　现在完成进行时的用法
 
 - part 1
 
-| 中文                                    | 英文                                    |
-| --------------------------------------- | --------------------------------------- |
-| 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  |
-| 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                       | 英文                                   |
+| -------------------------- | -------------------------------------- |
+| 1. 他已经洗完车了吗？      | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 2. 不，他还没有洗完车。    | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 3. 他已经持续洗车2小时了。 | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 4. 他已经持续洗车2小时了。 | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 5. 他已经持续洗车2小时了。 | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 6. 你的女儿正在哭吗？      | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 7. 你的女儿正在哭吗？      | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 8. 你的女儿正在哭吗？      | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
