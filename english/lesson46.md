@@ -17,14 +17,14 @@
 
 - part 2
 
-| 中文                                               | 英文                                   |
-| -------------------------------------------------- | -------------------------------------- |
-| 1. 他已经完成了他的作业了吗？                      | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 不，他还没有完成他的作业。                      | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 从3点开始他就已经持续地睡觉。                   | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. 他已经持续睡了4小时了。                         | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. 为什么从3点开始他就已经持续地睡觉？             | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. 因为今天他非常累。                              | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. 今天下午（this afternoon）他已经持续走了1小时。 | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. 为什么今天下午他已经持续走了1小时？             | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 9. 因为他的自行车坏了。                            | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                               | 英文                                                       |
+| -------------------------------------------------- | ---------------------------------------------------------- |
+| 1. 他已经完成了他的作业了吗？                      | 1. Has he finished his homework?                           |
+| 2. 不，他还没有完成他的作业。                      | 2. No, he has not finished his homework.                   |
+| 3. 从3点开始他就已经持续地睡觉。                   | 3. He has been sleeping since three o'clock.               |
+| 4. 他已经持续睡了4小时了。                         | 4. He has been sleeping for four hours.                    |
+| 5. 为什么从3点开始他就已经持续地睡觉？             | 5. Why has he been sleeping since three o'clock.           |
+| 6. 因为今天他非常累。                              | 6. Because he is very tired today.                         |
+| 7. 今天下午（this afternoon）他已经持续走了1小时。 | 7. He has been walking for an hours this afternoon.        |
+| 8. 为什么今天下午他已经持续走了1小时？             | 8. Why has he been walking for an hours in this afternoon? |
+| 9. 因为他的自行车坏了。                            | 9. Because his bicycle is broken.                          |
