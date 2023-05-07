@@ -1,29 +1,49 @@
-from pixivpy3 import *
+import requests
+import json
 
-api = AppPixivAPI()
-api.login("2565978507@qq.com", "123456Pixiv$")   # Not required
+requests.packages.urllib3.disable_warnings()
+n = 3
 
-# get origin url
-json_result = api.illust_detail(59580629)
-illust = json_result.illust
-print(">>> origin url: %s" % illust.image_urls['large'])
 
-# get ranking: 1-30
-# mode: [day, week, month, day_male, day_female, week_original, week_rookie, day_manga]
-json_result = api.illust_ranking('day')
-for illust in json_result.illusts:
-    print(" p1 [%s] %s" % (illust.title, illust.image_urls.medium))
+def get_url(keyword='', tag='', enableR18=1, num=20):
+    url = 'https://api.lolicon.app/setu/v2?keyword={}&tag={}&num={}&r18={}'.format(
+        keyword, tag, enableR18, num,)
+    return url
 
-# next page: 31-60
-next_qs = api.parse_qs(json_result.next_url)
-json_result = api.illust_ranking(**next_qs)
-for illust in json_result.illusts:
-    print(" p2 [%s] %s" % (illust.title, illust.image_urls.medium))
 
-# get all page:
-next_qs = {"mode": "day"}
-while next_qs:
-    json_result = api.illust_ranking(**next_qs)
-    for illust in json_result.illusts:
-        print("[%s] %s" % (illust.title, illust.image_urls.medium))
-    next_qs = api.parse_qs(json_result.next_url)
+def get_images(url):
+
+    # 存储所有图片的数据结构
+    images = []
+
+    # 访问接口，提取有效的图片数据
+    text = json.loads(requests.get(url).text)
+    dataArray = text['data']
+    for data in dataArray:
+        images.append({
+            "name": "{}.{}".format(data['title'], data['ext']),
+            "url": data['urls']['original'],
+        })
+
+    print(json.dumps(images, ensure_ascii=False, indent=2))
+    return images
+
+
+def download_image_to_local(url, name):
+    response = requests.get(url,)
+    with open(name, 'wb') as f:
+        f.write(response.content)
+        print('download image {} successfully!'.format(name))
+
+
+def main():
+    url = get_url('JK', '',  20, 1)
+    print('url is {0}'.format(url))
+
+    images = get_images(url)
+
+    for image in images:
+        download_image_to_local(image['url'], image['name'])
+
+
+main()
