@@ -5,9 +5,9 @@
 
 | 中文                                         | 英文                                   |
 | -------------------------------------------- | -------------------------------------- |
-| 1. 我以前是一位医生。                        | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. 你以前是一位医生吗？                      | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. 是的，我以前是一位医生。                  | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 1. 我以前是一位医生。                        | 1. I was a doctor before.              |
+| 2. 你以前是一位医生吗？                      | 2. Were you a doctor before?           |
+| 3. 是的，我以前是一位医生。                  | 3. Yes, I was a doctor before.         |
 | 4. 因为我喜欢教英文，我现在是一位英文老师。  | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
 | 5. 你何时在这个城市（city）里教英文呢？      | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
 | 6. 去年我开始在这个城市里教英文。            | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
