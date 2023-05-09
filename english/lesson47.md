@@ -1,27 +1,16 @@
 
-# lesson47
+# Lesson47　一般过去时的用法
 
 - part 1
 
-| 中文                       | 英文                           |
-| -------------------------- | ------------------------------ |
-        | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 1. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 2. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 4. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 5. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 6. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 7. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 8. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 9. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 10. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 11. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 12. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 13. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 14. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 15. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 16. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 17. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 18. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 19. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
-| 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | 20. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa |
+| 中文                                         | 英文                                                             |
+| -------------------------------------------- | ---------------------------------------------------------------- |
+| 1. 我以前是一位医生。                        | 1. I was a doctor before.                                        |
+| 2. 你以前是一位医生吗？                      | 2. Were you a doctor before?                                     |
+| 3. 是的，我以前是一位医生。                  | 3. Yes, I was a doctor before.                                   |
+| 4. 因为我喜欢教英文，我现在是一位英文老师。  | 4. Because I like to teach english, I am an English teacher now. |
+| 5. 你何时在这个城市（city）里教英文呢？      | 5. When did you teach English in this city?                      |
+| 6. 去年我开始在这个城市里教英文。            | 6. I started to teach English in this city last year.            |
+| 7. 你以前在哪里教英文？                      | 7. Where did you teach English before?                           |
+| 8. 我两年之前（two years ago）在台北教英语。 | 8. I taught English in Taipei two years ago.                     |
+| 9. 台北也是一个漂亮的城市。                  | 9. Taipei is a beautiful city too.                               |
