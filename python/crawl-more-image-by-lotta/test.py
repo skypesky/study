@@ -7,7 +7,8 @@ n = 3
 
 def get_url(keyword='', tag='', enableR18=1, num=20):
     url = 'https://api.lolicon.app/setu/v2?keyword={}&tag={}&num={}&r18={}'.format(
-        keyword, tag, enableR18, num,)
+        keyword, tag, num, enableR18)
+
     return url
 
 
@@ -37,7 +38,7 @@ def download_image_to_local(url, name):
 
 
 def main():
-    url = get_url('JK', '',  20, 1)
+    url = get_url('JK', '')
     print('url is {0}'.format(url))
 
     images = get_images(url)
