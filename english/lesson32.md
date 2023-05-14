@@ -5,11 +5,11 @@
 | 中文                          | 英文                                           |
 | ----------------------------- | ---------------------------------------------- |
 | 1. 有多少学生在你的学校里？   | 1. How many students are there in your school? |
-| 2. 有 93 个学生在我的学校里。 | 2. There are 93 stundets in my school.         |
+| 2. 有 93 个学生在我的学校里。 | 2. There are 93 students in my school.         |
 | 3. 你教多少学生？             | 3. How many students do you teach?             |
-| 4. 我教 27 个学生。           | 4. I teach 27 stundets.                        |
+| 4. 我教 27 个学生。           | 4. I teach 27 students.                        |
 | 5. 她教多少学生？             | 5. How many students does she teach.           |
-| 6. 她教 31 个学生。           | 6. She teaches 31 stundents.                   |
+| 6. 她教 31 个学生。           | 6. She teaches 31 students.                    |
 
 - part 1
 
