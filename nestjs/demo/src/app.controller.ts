@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Req } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -11,7 +11,8 @@ export class AppController {
   }
 
   @Get('/test')
-  findAll(): Promise<string[]> {
+  findAll(@Req() request): Promise<string[]> {
+    console.log(request.ip, request.hos);
     return Promise.resolve(['1', '2']);
   }
 }
