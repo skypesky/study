@@ -4,7 +4,7 @@
 // @version      2021.12.07
 // @description  leetcode自动生成markdown
 // @author       skypesky
-// @match        https://leetcode-cn.com/problems/*
+// @match        https://leetcode.cn/problems/*
 // @match        https://github.com/skypesky/leetcode-for-javascript*
 // @match        https://gitee.com/skypesky/leetcode-for-javascript*
 // @match        https://leetcode-cn.com/problemset/all/*
@@ -17,11 +17,9 @@
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // @grant        GM_xmlhttpRequest
-// ==========================资源============================
 // @resource     toastr https://cdn.bootcss.com/izitoast/1.3.0/css/iziToast.min.css
 // @resource avImage https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-07-11%2F5b45a5573f014.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618121209&t=1d42fd336c77b50622ce8d819f89b99a
 //
-// ==========================js============================
 // @require      https://cdn.bootcss.com/izitoast/1.3.0/js/iziToast.min.js
 // @require      https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
@@ -48,7 +46,7 @@
 
 
         // 点击leetcode标题,生成文件名
-        $(document).on('click', `#file-name`, function (event) {
+        $(document).on('click', `div.text-title-large`, function (event) {
             event.stopPropagation();
 
             GM_setClipboard(LeetcodeService.getMarkdownNFileName());
@@ -58,7 +56,7 @@
         });
 
         // 点击leetcode标题的下方,生成文档标题
-        $(document).on('click', `#markdown-title`, function (event) {
+        $(document).on('dblclick', `div[data-track-load="description_content"]`, function (event) {
             event.stopPropagation();
 
             const title = LeetcodeService.getTitle();
@@ -82,6 +80,8 @@
 
             GM_setClipboard(text);
             notification('Github复制成功');
+
+            window.open('https://github.com/skypesky/leetcode-for-javascript/edit/master/README.md');
         });
     }
 
@@ -150,7 +150,7 @@
 
     class LeetcodeService {
 
-        static titleSelector = `[data-cypress="QuestionTitle"] a`;
+        static titleSelector = `div.text-title-large a`;
 
         static getTitle() {
             return $(LeetcodeService.titleSelector).text();
