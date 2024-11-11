@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DID Spaces 助手
 // @namespace    http://tampermonkey.net/
-// @version      2024-02-16
+// @version      2024.11.11
 // @description  try to take over the world!
 // @author       skypesky
 // @match        https://*.didspaces.com/*
