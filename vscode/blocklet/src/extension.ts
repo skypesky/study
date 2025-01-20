@@ -1,17 +1,105 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
+import { existsSync, readFileSync } from 'fs';
+import path from 'path';
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
-  // Use the console to output diagnostic information (console.log) and errors (console.error)
-  // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "blocklet" is now active!');
+console.log('debug233.extension');
 
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with registerCommand
-  // The commandId parameter must match the command field in package.json
+import { parse } from '@babel/parser';
+// @ts-ignore
+import traverse from '@babel/traverse';
+import * as types from '@babel/types';
+
+vscode.languages.registerHoverProvider(
+  [
+    {
+      scheme: 'file',
+      language: 'javascript',
+    },
+    {
+      scheme: 'file',
+      language: 'typescript',
+    },
+  ],
+  {
+    async provideHover(document, position, token) {
+      const text = document.lineAt(position.line).text;
+      const wordRange = document.getWordRangeAtPosition(position);
+      const word = document.getText(wordRange);
+
+      // Parse the document text into an AST
+      let ast;
+      try {
+        ast = parse(text, {
+          sourceType: 'module',
+          plugins: ['typescript', 'jsx'],
+        });
+      } catch (err) {
+        console.error('Failed to parse file:', err);
+        return;
+      }
+
+      // Extract import/require statements
+      const packageMap: { [key: string]: string } = {};
+      traverse(ast, {
+        ImportDeclaration(path: any) {
+          const moduleName = path.node.source.value;
+          if (types.isStringLiteral(path.node.source)) {
+            packageMap[moduleName] = '';
+          }
+        },
+        CallExpression(path: any) {
+          if (
+            types.isIdentifier(path.node.callee, { name: 'require' }) &&
+            path.node.arguments.length === 1 &&
+            types.isStringLiteral(path.node.arguments[0])
+          ) {
+            const moduleName = path.node.arguments[0].value;
+            packageMap[moduleName] = '';
+          }
+        },
+      });
+
+      Object.entries(packageMap).forEach(([packageName]) => {
+        if (!/^[@\/-z0-9_-]+$/i.test(packageName)) {
+          delete packageMap[packageName];
+        }
+        const finalPackageName = packageName.split('/').slice(0, 2).join('/');
+        delete packageMap[packageName];
+        packageMap[finalPackageName] = '';
+      });
+
+      const hovers = [];
+      for (const packageName of Object.keys(packageMap)) {
+        try {
+          const packageJsonPath = require.resolve(
+            `${packageName}/package.json`,
+            {
+              paths: [vscode.workspace.rootPath || process.cwd()],
+            }
+          );
+          const packageJson = require(packageJsonPath);
+          packageMap[packageName] = packageJson.version;
+          hovers.push(`${packageName}: **${packageMap[packageName]}**`);
+        } catch (err) {
+          console.error(err);
+          delete packageMap[packageName];
+        }
+      }
+
+      // Show hover info if the word matches an imported module
+      if (hovers.length > 0) {
+        return new vscode.Hover(new vscode.MarkdownString(hovers.join('\n')));
+      }
+    },
+  }
+);
+
+export function activate(context: vscode.ExtensionContext) {
+  vscode.window.showInformationMessage('Hello World from blocklet!');
+
+  console.log('Congratulations, your extension "blocklet" is now active!');
+  console.log('debug233.registerHoverProvider');
+
   const disposable = vscode.commands.registerCommand(
     'blocklet.helloWorld',
     () => {
@@ -20,17 +108,7 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.window.showInformationMessage('Hello World from blocklet!');
     }
   );
-
   context.subscriptions.push(disposable);
-
-  context.subscriptions.push(
-    vscode.commands.registerCommand('blocklet.now', () => {
-      vscode.window.showInformationMessage(
-        `current data is ${new Date().toISOString()}`
-      );
-    })
-  );
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
