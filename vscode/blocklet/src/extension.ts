@@ -2,12 +2,13 @@ import { existsSync, readFileSync } from 'fs';
 import path from 'path';
 import * as vscode from 'vscode';
 
-console.log('debug233.extension');
-
 import { parse } from '@babel/parser';
 // @ts-ignore
 import traverse from '@babel/traverse';
 import * as types from '@babel/types';
+
+const outputChannel = vscode.window.createOutputChannel('blocklet');
+outputChannel.appendLine('Hello from blocklet!');
 
 vscode.languages.registerHoverProvider(
   [
@@ -22,6 +23,8 @@ vscode.languages.registerHoverProvider(
   ],
   {
     async provideHover(document, position, token) {
+      outputChannel.appendLine('provideHover');
+
       const text = document.lineAt(position.line).text;
       const wordRange = document.getWordRangeAtPosition(position);
       const word = document.getText(wordRange);
@@ -96,9 +99,7 @@ vscode.languages.registerHoverProvider(
 
 export function activate(context: vscode.ExtensionContext) {
   vscode.window.showInformationMessage('Hello World from blocklet!');
-
-  console.log('Congratulations, your extension "blocklet" is now active!');
-  console.log('debug233.registerHoverProvider');
+  outputChannel.appendLine('activated');
 
   const disposable = vscode.commands.registerCommand(
     'blocklet.helloWorld',
