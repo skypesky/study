@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "1.7.9",
     "fs-extra": "^10.1.0"
   },
   "devDependencies": {
