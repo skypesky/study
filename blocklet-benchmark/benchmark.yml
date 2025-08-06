@@ -1,0 +1,144 @@
+# origin is the base URL of the server to be tested
+origin: 'https://team.arcblock.io'
+
+# mode determines the benchmarking mode: 'rps' for requests per second, or 'concurrent' for concurrent users
+mode: 'concurrent'
+
+# concurrency sets the number of concurrent
+concurrency: 300
+
+# ramp is the ramp concurrency for the benchmark
+ramp: 100
+
+# timelimit is the total duration of the benchmark in seconds
+timelimit: 60
+
+# aiAnalysis indicates whether to analyze the benchmark results using AI
+aiAnalysis:
+  enable: false
+  language: 'chinese'
+  techStack: 'nodejs'
+  model: 'gpt-4o'
+
+# data provides dynamic values to be used in API requests
+data:
+  appDid: 'zNKf2ZJqsZNYrCKUjTCqwVjiPtk8Axq8tqU9'
+  userDid: 'z1YNg4eeyx38zJboGgPHWwFf82mcFCBNjeL'
+  loginToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxWU5nNGVleXgzOHpKYm9HZ1BIV3dGZjgybWNGQ0JOamVMIiwicm9sZSI6Im1lbWJlciIsInByb3ZpZGVyIjoid2FsbGV0Iiwia3ljIjoxLCJlbGV2YXRlZCI6ZmFsc2UsIndhbGxldE9TIjoid2ViIiwicGFzc3BvcnQiOnsiaWQiOiJ6MmlVM1lmdGJvRzMxbzlIR3FzZ2NQY1p0UFRKZnY5RXZiblhyIn0sInRva2VuVHlwZSI6InJlZnJlc2giLCJmdWxsTmFtZSI6IlpodSBMaWFuZyIsImlhdCI6MTc0NjY2ODgyOSwiZXhwIjoxNzQ3ODc4NDI5fQ.5HW-C4Ucmq-B9ehI4KzUpZltDIUxHEhLdTmqb9bAkbA'
+
+# logResponse determines whether to log the response body of each request
+logResponse: false
+
+# logError determines whether to log any errors encountered during requests
+logError: false
+
+# logParseApis indicates whether to log the parsed APIs
+logParseApis: false
+
+# The sitemap will be parsed and the apis will be added to the benchmark runtime
+# If your provide sitemaps, you can add it here, JSON response like: { "apis": [{"name": "/api/simple-example", "api": "/api/simple-example",},{"name": "/api/full-example", "api": "/api/full-example", "method": "GET", "cookie": "login_token=$$loginToken", "format": "json", "headers": {"Content-Type": "application/json; charset=utf-8"}, "skip": false, "only": false, "body": {}, "assert": {}}], "data": {"key": "value"} }
+sitemap:
+  enable: false
+  url: 'https://your-sitemap-url.com/sitemap'
+
+# apiReplace is a map of API endpoints to be replaced with dynamic values
+apiReplace:
+  '^/discuss-kit/': '/comment/'
+  '^/media-kit/': '/pages/image-bin/'
+
+# apis defines the list of API endpoints to benchmark
+apis:
+  - 'name': '/.well-known/service/api/did/login'
+    'api': '/.well-known/service/api/did/login'
+    'format': 'text'
+  - 'name': '/.well-known/service/api/did/session:without-session'
+    'api': '/.well-known/service/api/did/session'
+    'assert':
+      'error': 'null'
+      'user': 'not-null'
+  - 'name': '/.well-known/service/api/did/session'
+    'api': '/.well-known/service/api/did/session'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/.well-known/service/api/user-session'
+    'api': '/.well-known/service/api/user-session'
+    'cookie': 'login_token=$$loginToken'
+  - name: '/.well-known/service/api/user-session:visitor-id-without-found'
+    api: '/.well-known/service/api/user-session'
+    cookie: 'login_token=$$loginToken'
+    headers:
+      'x-blocklet-visitor-id': '30de66b1-e8bb-40c2-85a2-0174ae3c936e2'
+  - name: '/.well-known/service/api/user-session:visitor-id-found'
+    api: '/.well-known/service/api/user-session'
+    cookie: 'login_token2=$$loginToken'
+    headers:
+      'x-blocklet-visitor-id': '30de66b1-e8bb-40c2-85a2-0174ae3c936e'
+  - 'name': '/.well-known/service/api/user/privacy/config'
+    'api': '/.well-known/service/api/user/privacy/config?did=$$userDid'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/__blocklet__.js'
+    'api': '/__blocklet__.js'
+    'format': 'text'
+  - 'name': '/.well-known/service/user/settings'
+    'api': '/.well-known/service/user/settings?locale=en'
+    'cookie': 'login_token=$$loginToken'
+    'format': 'text'
+  - 'name': '/.well-known/service/api/user-session/myself'
+    'api': '/.well-known/service/api/user-session/myself?page=1&pageSize=1&status=expired'
+    'cookie': 'login_token=$$loginToken'
+    'assert':
+      'error': 'null'
+  - 'name': 'getNotifications'
+    'api': '/.well-known/service/api/gql'
+    'abtnodeFn': 'getNotifications'
+    'cookie': 'login_token=$$loginToken'
+    only: true
+    'body':
+      'teamDid': '$$appDid'
+      'receiver': '$$userDid'
+  - 'name': 'getNotificationComponents'
+    'api': '/.well-known/service/api/gql'
+    'abtnodeFn': 'getNotificationComponents'
+    'cookie': 'login_token=$$loginToken'
+    'body':
+      'teamDid': '$$appDid'
+      'receiver': '$$userDid'
+  - 'name': '/discuss-kit/api/discussions/pinned'
+    'api': '/discuss-kit/api/discussions/pinned'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/discussions?page=1&size=20'
+    'api': '/discuss-kit/api/discussions?page=1&size=20'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/chat/chats/unread'
+    'api': '/discuss-kit/api/chat/chats/unread'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/boards'
+    'api': '/discuss-kit/api/boards'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/chat/chats'
+    'api': '/discuss-kit/api/chat/chats'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/labels'
+    'api': '/discuss-kit/api/labels'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': '/media-kit/api/uploader/status'
+    'api': '/media-kit/api/uploader/status'
+    'cookie': 'login_token=$$loginToken'
+  - name: '/discuss-kit/api/posts/my?status=draft&type=discussion&page=1&size=0'
+    api: '/discuss-kit/api/posts/my?status=draft&type=discussion&page=1&size=0'
+    cookie: 'login_token=$$loginToken'
+  - 'name': '/discuss-kit/api/passports'
+    'api': '/discuss-kit/api/passports'
+    'cookie': 'login_token=$$loginToken'
+  - 'name': 'pages-kit: /en'
+    'api': '/en'
+    format: text
+    'cookie': 'login_token=$$loginToken'
+    'cookie2': '_ga_C3DTB23354=deleted; _ga_C3DTB23354=deleted; _ga=GA1.1.303038139.1745951557; vid=30de66b1-e8bb-40c2-85a2-0174ae3c936e; _ga_C5XXBN7WY7=GS2.1.s1746624682$o1$g1$t1746625130$j0$l0$h0; login_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxWU5nNGVleXgzOHpKYm9HZ1BIV3dGZjgybWNGQ0JOamVMIiwicm9sZSI6Im1lbWJlciIsInByb3ZpZGVyIjoid2FsbGV0Iiwia3ljIjoxLCJlbGV2YXRlZCI6ZmFsc2UsIndhbGxldE9TIjoid2ViIiwicGFzc3BvcnQiOnsiaWQiOiJ6MmlVM1lmdGJvRzMxbzlIR3FzZ2NQY1p0UFRKZnY5RXZiblhyIn0sImZ1bGxOYW1lIjoiWmh1IExpYW5nIiwiaWF0IjoxNzQ2NjI1NDU1LCJleHAiOjE3NDY2MjkwNTV9.wkD6WjCyO0KucrcVRZz25riiD0asNW6bNldJrh1HNIk; x-csrf-token=V-Y2VD2RcluMnuWCMVCcrA.WAQn9seXKNff0ZWzjnlFeQ; _ga_VCBHGKF55B=GS2.1.s1746625705$o6$g1$t1746625711$j0$l0$h0; _ga_C3DTB23354=GS2.1.s1746625457$o17$g1$t1746626195$j0$l0$h0'
+  - 'name':  'pages-kit: /preload'
+    'api': '/api/components/preload'
+    'cookie': 'login_token=$$loginToken'
+    method: 'POST'
+  - 'name':  'pages-kit: /cover-helper'
+    'api': '/en/cover-helper'
+    'cookie': 'login_token=$$loginToken'
+    format: text

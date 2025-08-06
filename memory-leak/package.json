@@ -1,0 +1,20 @@
+{
+  "name": "express-memory-leak-demo",
+  "version": "1.0.0",
+  "description": "Express memory leak demonstration with memory snapshot collection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": [
+    "express",
+    "memory-leak",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT"
+}

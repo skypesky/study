@@ -1,0 +1,59 @@
+# origin is the base URL of the server to be tested
+origin: 'https://bbqa6kdohohz5qimyrcwod5mgg57yntl4lh4gtr2siq.did.abtnet.io'
+
+# mode determines the benchmarking mode: 'rps' for requests per second, or 'concurrent' for concurrent users
+mode: 'concurrent'
+
+# concurrency sets the number of concurrent
+concurrency: 3000
+
+# ramp is the ramp concurrency for the benchmark
+ramp: 50
+
+# timelimit is the total duration of the benchmark in seconds
+timelimit: 30
+
+# aiAnalysis indicates whether to analyze the benchmark results using AI
+aiAnalysis:
+  enable: false
+  language: 'english'
+  techStack: 'nodejs'
+  model: 'gpt-4o'
+  type: 'aigne'
+
+# data provides dynamic values to be used in API requests
+data:
+  appDid: 'zNKsWi21LQ8tWHoR4GQrha7JPGRG6FySspKu'
+  userDid: 'z1c72nSkzubaaFx4GELSizWu6BqWcXzAXfW'
+  loginToken: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxYzcyblNrenViYWFGeDRHRUxTaXpXdTZCcVdjWHpBWGZXIiwicm9sZSI6Im93bmVyIiwicHJvdmlkZXIiOiJ3YWxsZXQiLCJreWMiOjAsImVsZXZhdGVkIjpmYWxzZSwiZnVsbE5hbWUiOiJzc3IiLCJpYXQiOjE3NTQ0NTk5OTgsImV4cCI6MTc1NDQ2MzU5OH0.r-z7spHQEyDy3nWZ_rPt27VBmKpP8mSa3J_LLHTG8bs'
+
+# logResponse determines whether to log the response body of each request
+logResponse: false
+
+# logError determines whether to log any errors encountered during requests
+logError: false
+
+# logParseApis indicates whether to log the parsed APIs
+logParseApis: false
+
+# The sitemap will be parsed and the apis will be added to the benchmark runtime
+# If your provide sitemaps, you can add it here, JSON response like: { "apis": [{"name": "/api/simple-example", "api": "/api/simple-example",},{"name": "/api/full-example", "api": "/api/full-example", "method": "GET", "cookie": "login_token=$$loginToken", "format": "json", "headers": {"Content-Type": "application/json; charset=utf-8"}, "skip": false, "only": false, "body": {}, "assert": {}}], "data": {"key": "value"} }
+sitemap:
+  enable: false
+  url: 'https://your-sitemap-url.com/sitemap'
+
+# apiReplace is a map of API endpoints to be replaced with dynamic values
+apiReplace:
+  '^/api-router/': '/api-replace-router/'
+
+# apis defines the list of API endpoints to benchmark
+apis:
+  # - name: Vist blocklets page
+  #   api: /.well-known/server/admin/blocklets
+  #   method: GET
+  #   format: text
+  #   assert:
+  #     id: not-null
+  - name: Vist User Session
+    api: /.well-known/server/admin/api/did/session
+    method: GET

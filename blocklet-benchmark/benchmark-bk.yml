@@ -1,0 +1,92 @@
+origin: 'https://bbqavygk2ftuhjtqj3nctxmht3jxjad3hcw7qwwjdry.did.abtnet.io'
+
+# mode specifies the benchmarking mode: 'rps' for requests per second, 'concurrent' for concurrent users
+mode: 'concurrent'
+
+# concurrency sets the number of concurrent requests (only applies when mode is 'concurrent')
+concurrency: 300
+ramp: 50
+
+# timelimit defines the total duration of the benchmark in seconds
+timelimit: 1000
+
+# data contains dynamic values to be used in API requests
+data:
+  userDid: 'z1YNg4eeyx38zJboGgPHWwFf82mcFCBNjeL'
+  teamDid: 'did:abt:zNKf2ZJqsZNYrCKUjTCqwVjiPtk8Axq8tqU9'
+  loginToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxWU5nNGVleXgzOHpKYm9HZ1BIV3dGZjgybWNGQ0JOamVMIiwicm9sZSI6Im1lbWJlciIsInByb3ZpZGVyIjoid2FsbGV0Iiwia3ljIjoxLCJlbGV2YXRlZCI6ZmFsc2UsIndhbGxldE9TIjoid2ViIiwicGFzc3BvcnQiOnsiaWQiOiJ6MmlVM1lmdGJvRzMxbzlIR3FzZ2NQY1p0UFRKZnY5RXZiblhyIn0sInRva2VuVHlwZSI6InJlZnJlc2giLCJmdWxsTmFtZSI6IlpodSBMaWFuZyIsImlhdCI6MTc0NDE4NDY3MiwiZXhwIjoxNzQ1Mzk0MjcyfQ._q_3nzGU9NF1-AL008RzcFpJhAGXQrLsuWaiVVU6gco'
+logResponse: false
+logError: false
+logParseApis: true
+apiReplace:
+  ^/discuss-kit/: /comment/
+apis:
+  - name: /.well-known/service/api/did/login
+    api: /.well-known/service/api/did/login
+    format: text
+  - name: /.well-known/service/api/did/session
+    api: /.well-known/service/api/did/session
+    assert:
+      error: "null"
+      user: not-null
+  - name: /.well-known/service/api/did/session:with-session
+    api: /.well-known/service/api/did/session
+    cookie: login_token=$$loginToken
+  - name: /.well-known/service/api/user-session
+    api: /.well-known/service/api/user-session
+    cookie: login_token=$$loginToken
+  - name: /.well-known/service/api/user/privacy/config
+    api: /.well-known/service/api/user/privacy/config?did=$$userDid
+    cookie: login_token=$$loginToken
+  - name: /__blocklet__.js
+    api: /__blocklet__.js
+    format: text
+  - name: /.well-known/service/user/settings
+    api: /.well-known/service/user/settings?locale=en
+    cookie: login_token=$$loginToken
+    format: text
+  - name: /.well-known/service/api/user-session/myself
+    api: /.well-known/service/api/user-session/myself
+    cookie: login_token=$$loginToken
+    assert:
+      error: "null"
+  - name: getNotifications
+    api: /.well-known/service/api/gql
+    abtnodeFn: getNotifications
+    cookie: login_token=$$loginToken
+    body:
+      teamDid: $$teamDid
+      userDid: $$userDid
+  - name: getNotificationComponents
+    api: /.well-known/service/api/gql
+    abtnodeFn: getNotificationComponents
+    cookie: login_token=$$loginToken
+    body:
+      teamDid: $$teamDid
+      userDid: $$userDid
+  - name: /discuss-kit/api/discussions/pinned
+    api: /discuss-kit/api/discussions/pinned
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/discussions?page=1&size=20
+    api: /discuss-kit/api/discussions?page=1&size=20
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/chat/chats/unread
+    api: /discuss-kit/api/chat/chats/unread
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/boards
+    api: /discuss-kit/api/boards
+  - name: /discuss-kit/api/chat/chats
+    api: /discuss-kit/api/chat/chats
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/labels
+    api: /discuss-kit/api/labels
+    cookie: login_token=$$loginToken
+  - name: /media-kit/api/uploader/status
+    api: /media-kit/api/uploader/status
+    cookie: login_token=$$loginToken
+  - name: /api/posts/my?status=draft&type=discussion&page=1&size=0
+    api: /api/posts/my?status=draft&type=discussion&page=1&size=0
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/passports
+    api: /discuss-kit/api/passports
+    cookie: login_token=$$loginToken

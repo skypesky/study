@@ -1,0 +1,58 @@
+# origin is the base URL of the server to be tested
+origin: 'https://bbqawyjjwllb5fton6ahzbrufshnkmoagb5p2i5ucju.did.abtnet.io/.well-known/did.json'
+
+# mode determines the benchmarking mode: 'rps' for requests per second, or 'concurrent' for concurrent users
+mode: 'concurrent'
+
+# concurrency sets the number of concurrent
+concurrency: 300
+
+# ramp is the ramp concurrency for the benchmark
+ramp: 50
+
+# timelimit is the total duration of the benchmark in seconds
+timelimit: 30
+
+# aiAnalysis indicates whether to analyze the benchmark results using AI
+aiAnalysis:
+  enable: false
+  language: 'english'
+  techStack: 'nodejs'
+  model: 'gpt-4o'
+  type: 'aigne'
+
+# data provides dynamic values to be used in API requests
+data:
+  appDid: 'your-app-did'
+  userDid: 'your-user-did'
+  loginToken: 'your-login-token'
+
+# logResponse determines whether to log the response body of each request
+logResponse: false
+
+# logError determines whether to log any errors encountered during requests
+logError: false
+
+# logParseApis indicates whether to log the parsed APIs
+logParseApis: false
+
+# The sitemap will be parsed and the apis will be added to the benchmark runtime
+# If your provide sitemaps, you can add it here, JSON response like: { "apis": [{"name": "/api/simple-example", "api": "/api/simple-example",},{"name": "/api/full-example", "api": "/api/full-example", "method": "GET", "cookie": "login_token=$$loginToken", "format": "json", "headers": {"Content-Type": "application/json; charset=utf-8"}, "skip": false, "only": false, "body": {}, "assert": {}}], "data": {"key": "value"} }
+sitemap:
+  enable: false
+  url: 'https://your-sitemap-url.com/sitemap'
+
+# apiReplace is a map of API endpoints to be replaced with dynamic values
+apiReplace:
+  '^/api-router/': '/api-replace-router/'
+
+# apis defines the list of API endpoints to benchmark
+apis:
+  - name: Vist did.json
+    api: /.well-known/did.json
+    method: GET
+    assert:
+      id: not-null
+  - name: Vist healthy
+    api: /.well-known/service/health
+    method: GET

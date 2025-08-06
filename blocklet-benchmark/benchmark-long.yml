@@ -1,0 +1,90 @@
+origin: 'https://bbqav457rqoimefrxz3bnkpccrym3w2ukimv6wjw2ee.did.abtnet.io'
+mode: concurrent
+concurrency: 300
+ramp: 50
+timelimit: 3000
+aiAnalysis:
+  enable: false
+  language: "chinese"
+  techStack: "nodejs"
+  model: "gpt-4o"
+# data contains dynamic values to be used in API requests
+data:
+  userDid: 'z1iAeUZ7ae4M1Ut3QZaEaAavtdEMKhtLpF2'
+  teamDid: 'zNKfF5yY5911LKF4SoBwLJnDFAxdeb7EURm2'
+  loginToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxaUFlVVo3YWU0TTFVdDNRWmFFYUFhdnRkRU1LaHRMcEYyIiwicm9sZSI6Imd1ZXN0IiwicHJvdmlkZXIiOiJ3YWxsZXQiLCJreWMiOjAsImVsZXZhdGVkIjpmYWxzZSwid2FsbGV0T1MiOiJ3ZWIiLCJmdWxsTmFtZSI6InNzciIsImlhdCI6MTc1NDQ2NDEwMiwiZXhwIjoxNzU0NTUwNTAyfQ.8__443uuuplpxdaItNwPXv7RdGXB8-ngf5kgo1II4js; x-csrf-token=4OzeFImqq37gqjcfbrbsmg.45Gf5bs1sJc6OCutxzKJcA'
+logResponse: true
+logError: true
+logParseApis: false
+apiReplace:
+  ^/discuss-kit/: /comment/
+apis:
+  - name: /.well-known/service/api/did/login
+    api: /.well-known/service/api/did/login
+    format: text
+  - name: /.well-known/service/api/did/session:without-session
+    api: /.well-known/service/api/did/session
+    assert:
+      error: "null"
+      user: not-null
+  - name: /.well-known/service/api/did/session
+    api: /.well-known/service/api/did/session
+    cookie: login_token=$$loginToken
+  - name: /.well-known/service/api/user-session
+    api: /.well-known/service/api/user-session
+    cookie: login_token=$$loginToken
+  - name: /.well-known/service/api/user/privacy/config
+    api: /.well-known/service/api/user/privacy/config?did=$$userDid
+    cookie: login_token=$$loginToken
+  - name: /__blocklet__.js
+    api: /__blocklet__.js
+    format: text
+  - name: /.well-known/service/user/settings
+    api: /.well-known/service/user/settings?locale=en
+    cookie: login_token=$$loginToken
+    format: text
+  - name: /.well-known/service/api/user-session/myself
+    api: /.well-known/service/api/user-session/myself
+    cookie: login_token=$$loginToken
+    assert:
+      error: "null"
+  - name: getNotifications
+    api: /.well-known/service/api/gql
+    abtnodeFn: getNotifications
+    cookie: login_token=$$loginToken
+    body:
+      teamDid: $$teamDid
+      userDid: $$userDid
+  - name: getNotificationComponents
+    api: /.well-known/service/api/gql
+    abtnodeFn: getNotificationComponents
+    cookie: login_token=$$loginToken
+    body:
+      teamDid: $$teamDid
+      userDid: $$userDid
+  - name: /discuss-kit/api/discussions/pinned
+    api: /discuss-kit/api/discussions/pinned
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/discussions?page=1&size=20
+    api: /discuss-kit/api/discussions?page=1&size=20
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/chat/chats/unread
+    api: /discuss-kit/api/chat/chats/unread
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/boards
+    api: /discuss-kit/api/boards
+  - name: /discuss-kit/api/chat/chats
+    api: /discuss-kit/api/chat/chats
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/labels
+    api: /discuss-kit/api/labels
+    cookie: login_token=$$loginToken
+  - name: /media-kit/api/uploader/status
+    api: /media-kit/api/uploader/status
+    cookie: login_token=$$loginToken
+  - name: /api/posts/my?status=draft&type=discussion&page=1&size=0
+    api: /api/posts/my?status=draft&type=discussion&page=1&size=0
+    cookie: login_token=$$loginToken
+  - name: /discuss-kit/api/passports
+    api: /discuss-kit/api/passports
+    cookie: login_token=$$loginToken

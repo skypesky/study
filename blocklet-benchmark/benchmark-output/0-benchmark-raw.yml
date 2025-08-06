@@ -1,0 +1,666 @@
+benchmark:
+  - concurrency: 50
+    count: 401
+    success: 401
+    rps: 171
+    min: 3
+    t50: 34
+    t90: 1085
+    t99: 1711
+    max: 1834
+    time: "2.35"
+    name: Vist User Session
+  - concurrency: 100
+    count: 729
+    success: 729
+    rps: 280
+    min: 2
+    t50: 34
+    t90: 1341
+    t99: 1509
+    max: 1579
+    time: "2.60"
+    name: Vist User Session
+  - concurrency: 150
+    count: 934
+    success: 934
+    rps: 354
+    min: 3
+    t50: 29
+    t90: 1423
+    t99: 1921
+    max: 1984
+    time: "2.64"
+    name: Vist User Session
+  - concurrency: 200
+    count: 707
+    success: 707
+    rps: 194
+    min: 2
+    t50: 57
+    t90: 2375
+    t99: 2913
+    max: 2920
+    time: "3.64"
+    name: Vist User Session
+  - concurrency: 250
+    count: 1079
+    success: 1079
+    rps: 402
+    min: 2
+    t50: 49
+    t90: 1737
+    t99: 2110
+    max: 2149
+    time: "2.69"
+    name: Vist User Session
+  - concurrency: 300
+    count: 999
+    success: 999
+    rps: 226
+    min: 3
+    t50: 53
+    t90: 2874
+    t99: 3434
+    max: 3499
+    time: "4.42"
+    name: Vist User Session
+  - concurrency: 350
+    count: 913
+    success: 913
+    rps: 208
+    min: 3
+    t50: 112
+    t90: 3330
+    t99: 3717
+    max: 3781
+    time: "4.39"
+    name: Vist User Session
+  - concurrency: 400
+    count: 1165
+    success: 1165
+    rps: 282
+    min: 2
+    t50: 54
+    t90: 3177
+    t99: 3397
+    max: 3489
+    time: "4.13"
+    name: Vist User Session
+  - concurrency: 450
+    count: 1045
+    success: 1045
+    rps: 177
+    min: 3
+    t50: 251
+    t90: 5279
+    t99: 5471
+    max: 5480
+    time: "5.91"
+    name: Vist User Session
+  - concurrency: 500
+    count: 1064
+    success: 1064
+    rps: 316
+    min: 3
+    t50: 1212
+    t90: 3075
+    t99: 3163
+    max: 3169
+    time: "3.36"
+    name: Vist User Session
+  - concurrency: 550
+    count: 1946
+    success: 1946
+    rps: 672
+    min: 2
+    t50: 15
+    t90: 2140
+    t99: 2716
+    max: 2856
+    time: "2.90"
+    name: Vist User Session
+  - concurrency: 600
+    count: 2953
+    success: 2953
+    rps: 979
+    min: 1
+    t50: 12
+    t90: 1517
+    t99: 2921
+    max: 2946
+    time: "3.02"
+    name: Vist User Session
+  - concurrency: 650
+    count: 2225
+    success: 2225
+    rps: 625
+    min: 2
+    t50: 20
+    t90: 2289
+    t99: 3508
+    max: 3536
+    time: "3.56"
+    name: Vist User Session
+  - concurrency: 700
+    count: 1931
+    success: 1930
+    rps: 450
+    min: 1
+    t50: 337
+    t90: 2541
+    t99: 3660
+    max: 4153
+    time: "4.29"
+    name: Vist User Session
+  - concurrency: 750
+    count: 2866
+    success: 2866
+    rps: 905
+    min: 1
+    t50: 12
+    t90: 2123
+    t99: 3077
+    max: 3138
+    time: "3.17"
+    name: Vist User Session
+  - concurrency: 800
+    count: 3107
+    success: 3107
+    rps: 873
+    min: 1
+    t50: 12
+    t90: 2221
+    t99: 3505
+    max: 3536
+    time: "3.56"
+    name: Vist User Session
+  - concurrency: 850
+    count: 2285
+    success: 2285
+    rps: 622
+    min: 1
+    t50: 55
+    t90: 3048
+    t99: 3598
+    max: 3664
+    time: "3.67"
+    name: Vist User Session
+  - concurrency: 900
+    count: 2925
+    success: 2925
+    rps: 643
+    min: 1
+    t50: 29
+    t90: 3211
+    t99: 4518
+    max: 4529
+    time: "4.55"
+    name: Vist User Session
+  - concurrency: 950
+    count: 2714
+    success: 2714
+    rps: 614
+    min: 2
+    t50: 21
+    t90: 3339
+    t99: 4004
+    max: 4405
+    time: "4.42"
+    name: Vist User Session
+  - concurrency: 1000
+    count: 2707
+    success: 2707
+    rps: 701
+    min: 2
+    t50: 41
+    t90: 3255
+    t99: 3762
+    max: 3848
+    time: "3.86"
+    name: Vist User Session
+  - concurrency: 1050
+    count: 2749
+    success: 2749
+    rps: 527
+    min: 2
+    t50: 37
+    t90: 4125
+    t99: 5098
+    max: 5189
+    time: "5.22"
+    name: Vist User Session
+  - concurrency: 1100
+    count: 3068
+    success: 3068
+    rps: 528
+    min: 2
+    t50: 37
+    t90: 3721
+    t99: 5790
+    max: 5800
+    time: "5.81"
+    name: Vist User Session
+  - concurrency: 1150
+    count: 2938
+    success: 2938
+    rps: 642
+    min: 2
+    t50: 43
+    t90: 4042
+    t99: 4557
+    max: 4559
+    time: "4.58"
+    name: Vist User Session
+  - concurrency: 1200
+    count: 2421
+    success: 2421
+    rps: 516
+    min: 2
+    t50: 1446
+    t90: 4116
+    t99: 4643
+    max: 4670
+    time: "4.69"
+    name: Vist User Session
+  - concurrency: 1250
+    count: 2503
+    success: 2503
+    rps: 513
+    min: 2
+    t50: 1773
+    t90: 4486
+    t99: 4836
+    max: 4858
+    time: "4.88"
+    name: Vist User Session
+  - concurrency: 1300
+    count: 3650
+    success: 3650
+    rps: 1105
+    min: 2
+    t50: 38
+    t90: 2801
+    t99: 3257
+    max: 3288
+    time: "3.30"
+    name: Vist User Session
+  - concurrency: 1350
+    count: 3737
+    success: 3737
+    rps: 1060
+    min: 2
+    t50: 46
+    t90: 2870
+    t99: 3486
+    max: 3514
+    time: "3.53"
+    name: Vist User Session
+  - concurrency: 1400
+    count: 3288
+    success: 3288
+    rps: 753
+    min: 2
+    t50: 842
+    t90: 3147
+    t99: 3409
+    max: 4350
+    time: "4.36"
+    name: Vist User Session
+  - concurrency: 1450
+    count: 4056
+    success: 4056
+    rps: 1233
+    min: 1
+    t50: 50
+    t90: 2901
+    t99: 3248
+    max: 3276
+    time: "3.29"
+    name: Vist User Session
+  - concurrency: 1500
+    count: 4039
+    success: 4039
+    rps: 1143
+    min: 1
+    t50: 49
+    t90: 3224
+    t99: 3492
+    max: 3508
+    time: "3.53"
+    name: Vist User Session
+  - concurrency: 1550
+    count: 4276
+    success: 4276
+    rps: 1225
+    min: 1
+    t50: 49
+    t90: 3148
+    t99: 3432
+    max: 3462
+    time: "3.49"
+    name: Vist User Session
+  - concurrency: 1600
+    count: 4206
+    success: 4206
+    rps: 930
+    min: 1
+    t50: 200
+    t90: 3008
+    t99: 4465
+    max: 4504
+    time: "4.52"
+    name: Vist User Session
+  - concurrency: 1650
+    count: 4707
+    success: 4707
+    rps: 963
+    min: 1
+    t50: 50
+    t90: 3495
+    t99: 4819
+    max: 4865
+    time: "4.89"
+    name: Vist User Session
+  - concurrency: 1700
+    count: 4272
+    success: 4272
+    rps: 1205
+    min: 1
+    t50: 206
+    t90: 3103
+    t99: 3483
+    max: 3520
+    time: "3.55"
+    name: Vist User Session
+  - concurrency: 1750
+    count: 4842
+    success: 4842
+    rps: 1061
+    min: 1
+    t50: 115
+    t90: 2908
+    t99: 4479
+    max: 4543
+    time: "4.56"
+    name: Vist User Session
+  - concurrency: 1800
+    count: 4328
+    success: 4328
+    rps: 1210
+    min: 1
+    t50: 629
+    t90: 3168
+    t99: 3522
+    max: 3558
+    time: "3.58"
+    name: Vist User Session
+  - concurrency: 1850
+    count: 4696
+    success: 4696
+    rps: 1227
+    min: 1
+    t50: 523
+    t90: 3387
+    t99: 3754
+    max: 3808
+    time: "3.83"
+    name: Vist User Session
+  - concurrency: 1900
+    count: 4884
+    success: 4884
+    rps: 1119
+    min: 1
+    t50: 437
+    t90: 3828
+    t99: 4171
+    max: 4353
+    time: "4.37"
+    name: Vist User Session
+  - concurrency: 1950
+    count: 4385
+    success: 4385
+    rps: 912
+    min: 2
+    t50: 702
+    t90: 4405
+    t99: 4735
+    max: 4756
+    time: "4.81"
+    name: Vist User Session
+  - concurrency: 2000
+    count: 4341
+    success: 4340
+    rps: 1239
+    min: 1
+    t50: 845
+    t90: 3173
+    t99: 3420
+    max: 3460
+    time: "3.50"
+    name: Vist User Session
+  - concurrency: 2050
+    count: 4469
+    success: 4469
+    rps: 936
+    min: 1
+    t50: 800
+    t90: 4413
+    t99: 4719
+    max: 4746
+    time: "4.78"
+    name: Vist User Session
+  - concurrency: 2100
+    count: 4563
+    success: 4563
+    rps: 730
+    min: 2
+    t50: 864
+    t90: 3234
+    t99: 3570
+    max: 6204
+    time: "6.25"
+    name: Vist User Session
+  - concurrency: 2150
+    count: 4191
+    success: 4191
+    rps: 896
+    min: 2
+    t50: 1357
+    t90: 3731
+    t99: 4503
+    max: 4548
+    time: "4.68"
+    name: Vist User Session
+  - concurrency: 2200
+    count: 5127
+    success: 5127
+    rps: 1309
+    min: 1
+    t50: 551
+    t90: 3283
+    t99: 3830
+    max: 3860
+    time: "3.92"
+    name: Vist User Session
+  - concurrency: 2250
+    count: 5274
+    success: 5274
+    rps: 666
+    min: 1
+    t50: 640
+    t90: 4677
+    t99: 7839
+    max: 7860
+    time: "7.92"
+    name: Vist User Session
+  - concurrency: 2300
+    count: 3035
+    success: 3035
+    rps: 837
+    min: 60
+    t50: 1826
+    t90: 2609
+    t99: 3005
+    max: 3260
+    time: "3.63"
+    name: Vist User Session
+  - concurrency: 2350
+    count: 5036
+    success: 5036
+    rps: 1124
+    min: 1
+    t50: 701
+    t90: 3854
+    t99: 4198
+    max: 4383
+    time: "4.48"
+    name: Vist User Session
+  - concurrency: 2400
+    count: 5448
+    success: 5448
+    rps: 744
+    min: 1
+    t50: 677
+    t90: 3567
+    t99: 7286
+    max: 7304
+    time: "7.33"
+    name: Vist User Session
+  - concurrency: 2450
+    count: 3571
+    success: 3571
+    rps: 945
+    min: 91
+    t50: 1787
+    t90: 2671
+    t99: 3334
+    max: 3479
+    time: "3.78"
+    name: Vist User Session
+  - concurrency: 2500
+    count: 5357
+    success: 5357
+    rps: 1093
+    min: 1
+    t50: 802
+    t90: 4446
+    t99: 4771
+    max: 4798
+    time: "4.90"
+    name: Vist User Session
+  - concurrency: 2550
+    count: 5185
+    success: 5185
+    rps: 717
+    min: 1
+    t50: 1049
+    t90: 3759
+    t99: 5387
+    max: 7141
+    time: "7.24"
+    name: Vist User Session
+  - concurrency: 2600
+    count: 3138
+    success: 3138
+    rps: 808
+    min: 100
+    t50: 2325
+    t90: 3341
+    t99: 3790
+    max: 3800
+    time: "3.88"
+    name: Vist User Session
+  - concurrency: 2650
+    count: 5436
+    success: 5436
+    rps: 1067
+    min: 1
+    t50: 1064
+    t90: 4446
+    t99: 4867
+    max: 5028
+    time: "5.09"
+    name: Vist User Session
+  - concurrency: 2700
+    count: 4425
+    success: 4425
+    rps: 442
+    min: 2
+    t50: 2169
+    t90: 5753
+    t99: 9878
+    max: 9925
+    time: "10.01"
+    name: Vist User Session
+  - concurrency: 2750
+    count: 2974
+    success: 2974
+    rps: 834
+    min: 51
+    t50: 2392
+    t90: 3003
+    t99: 3158
+    max: 3424
+    time: "3.56"
+    name: Vist User Session
+  - concurrency: 2800
+    count: 4659
+    success: 4659
+    rps: 541
+    min: 1
+    t50: 2113
+    t90: 7319
+    t99: 8486
+    max: 8535
+    time: "8.61"
+    name: Vist User Session
+  - concurrency: 2850
+    count: 3517
+    success: 3517
+    rps: 743
+    min: 108
+    t50: 2447
+    t90: 3861
+    t99: 4357
+    max: 4429
+    time: "4.74"
+    name: Vist User Session
+  - concurrency: 2900
+    count: 5443
+    success: 5443
+    rps: 698
+    min: 1
+    t50: 1351
+    t90: 4461
+    t99: 7667
+    max: 7702
+    time: "7.80"
+    name: Vist User Session
+  - concurrency: 2950
+    count: 3329
+    success: 3329
+    rps: 814
+    min: 59
+    t50: 2340
+    t90: 3319
+    t99: 3578
+    max: 3709
+    time: "4.09"
+    name: Vist User Session
+  - concurrency: 3000
+    count: 5242
+    success: 5242
+    rps: 351
+    min: 2
+    t50: 1840
+    t90: 7798
+    t99: 14790
+    max: 14850
+    time: "14.95"
+    name: Vist User Session
+serverVersion: unknown
+platform: darwin
+cpuCores: 10
+memoryGB: "64"
+totalTime: 280.759s

@@ -1,0 +1,55 @@
+# origin is the base URL of the server to be tested
+origin: 'https://bbqawyjjwllb5fton6ahzbrufshnkmoagb5p2i5ucju.did.abtnet.io'
+
+# mode determines the benchmarking mode: 'rps' for requests per second, or 'concurrent' for concurrent users
+mode: 'concurrent'
+
+# concurrency sets the number of concurrent
+concurrency: 300
+
+# ramp is the ramp concurrency for the benchmark
+ramp: 50
+
+# timelimit is the total duration of the benchmark in seconds
+timelimit: 30
+
+# aiAnalysis indicates whether to analyze the benchmark results using AI
+aiAnalysis:
+  enable: false
+  language: 'english'
+  techStack: 'nodejs'
+  model: 'gpt-4o'
+  type: 'aigne'
+
+# data provides dynamic values to be used in API requests
+data:
+  appDid: 'zNKgVQKxw3NBixnq9H2KqcTSvn4RNnSWzMiU'
+  userDid: 'z1f7GUMYis98Bqp3GyHkKNPDZ7m1314xLPJ'
+  loginToken: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidXNlciIsImRpZCI6InoxZjdHVU1ZaXM5OEJxcDNHeUhrS05QRFo3bTEzMTR4TFBKIiwicm9sZSI6Im93bmVyIiwicHJvdmlkZXIiOiJ3YWxsZXQiLCJreWMiOjAsImVsZXZhdGVkIjp0cnVlLCJwYXNzcG9ydCI6eyJpZCI6InoyaVU1N2E5N00xUlNWd0IxNDJYa0NtV3h4UHg1Q05jZFN6U3IifSwiZnVsbE5hbWUiOiJzc3IiLCJpYXQiOjE3NTQ0NTg2NzgsImV4cCI6MTc1NDU0NTA3OH0.1s2FBwMHwgX4q2Rgt4Ar-TGO2yNURFL2dW53NSnMVeo; vid=38aff806-d906-4f76-a2fb-feb1b1328163; x-csrf-token=icvCjl_v1bQ0KH9z4SLiNQ.zwp7quUVZvGJPbV2PEZB7w'
+
+# logResponse determines whether to log the response body of each request
+logResponse: false
+
+# logError determines whether to log any errors encountered during requests
+logError: false
+
+# logParseApis indicates whether to log the parsed APIs
+logParseApis: false
+
+# The sitemap will be parsed and the apis will be added to the benchmark runtime
+# If your provide sitemaps, you can add it here, JSON response like: { "apis": [{"name": "/api/simple-example", "api": "/api/simple-example",},{"name": "/api/full-example", "api": "/api/full-example", "method": "GET", "cookie": "login_token=$$loginToken", "format": "json", "headers": {"Content-Type": "application/json; charset=utf-8"}, "skip": false, "only": false, "body": {}, "assert": {}}], "data": {"key": "value"} }
+sitemap:
+  enable: false
+  url: 'https://your-sitemap-url.com/sitemap'
+
+# apiReplace is a map of API endpoints to be replaced with dynamic values
+apiReplace:
+  '^/api-router/': '/api-replace-router/'
+
+# apis defines the list of API endpoints to benchmark
+apis:
+  - name: Vist home page
+    api: /admin/home
+    method: GET
+    format: text
+
