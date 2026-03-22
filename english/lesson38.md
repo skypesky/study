@@ -1,3 +1,7 @@
+# <<<<<<< HEAD
+
+> > > > > > > origin/master
+
 # Lesson38　程度副词的用法
 
 - part 1
