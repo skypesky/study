@@ -33,7 +33,7 @@ const model = new ChatOpenAI({
 const agent = createAgent({
   model: model,
   tools: [getWeather],
-  systemPrompt: "必须使用中文回答",
+  systemPrompt: "你是一位擅长用文言文表达的专家天气预报员，使用中文回答问题。",
 });
 
 const data = await agent.invoke({
