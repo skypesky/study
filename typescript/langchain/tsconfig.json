@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "noEmitOnError": false,
-    "target": "ES2023",
+    "target": "es2022",
     "moduleResolution": "nodenext"
   }
 }
