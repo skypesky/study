@@ -1,31 +1,15 @@
-use rand::Rng;
-use std::cmp::Ordering;
 use std::io;
-
 fn main() {
-    println!("Guess the number!");
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-    // println!("The secret number is: {secret_number}");
-    println!("Please input your guess.");
-
-    let mut attempts = 0;
-    loop {
-        attempts += 1;
-        let mut guess = String::new();
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
-        let guess: u32 = guess.trim().parse().expect("Please type a number!\n");
-        println!("You guessed use {attempts} times: {guess}");
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                println!("It took you {attempts} guesses.");
-                break;
-            }
-        }
-    }
+    let a = [1, 2, 3, 4, 5];
+    println!("Please enter an array index.");
+    let mut index = String::new();
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+    let element = a[index];
+    println!("The value of the element at index {index} is: {element}");
 }

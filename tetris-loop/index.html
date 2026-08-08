@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Loop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0a0a0f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            overflow: hidden;
+        }
+
+        .title {
+            color: #00f5ff;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 0.5em;
+            margin-bottom: 20px;
+            text-shadow:
+                0 0 10px #00f5ff,
+                0 0 20px #00f5ff,
+                0 0 40px #00f5ff;
+            animation: titlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .game-container {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(135deg, #00f5ff, #bf00ff, #ff0040);
+            border-radius: 8px;
+            box-shadow:
+                0 0 20px rgba(0, 245, 255, 0.5),
+                0 0 40px rgba(191, 0, 255, 0.3),
+                inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(10, 28px);
+            grid-template-rows: repeat(20, 28px);
+            gap: 1px;
+            background: #0a0a0f;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .cell {
+            width: 28px;
+            height: 28px;
+            background: #0d0d15;
+            border: 1px solid #1a1a2e;
+            transition: background-color 0.05s, box-shadow 0.05s;
+        }
+
+        .cell.I { background: #00f5ff; box-shadow: 0 0 10px #00f5ff, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.O { background: #ffd700; box-shadow: 0 0 10px #ffd700, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.T { background: #bf00ff; box-shadow: 0 0 10px #bf00ff, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.S { background: #00ff41; box-shadow: 0 0 10px #00ff41, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.Z { background: #ff0040; box-shadow: 0 0 10px #ff0040, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.J { background: #0080ff; box-shadow: 0 0 10px #0080ff, inset 0 0 5px rgba(255,255,255,0.3); }
+        .cell.L { background: #ff8000; box-shadow: 0 0 10px #ff8000, inset 0 0 5px rgba(255,255,255,0.3); }
+
+        .cell.ghost {
+            opacity: 0.3;
+            box-shadow: none;
+            background: currentColor;
+        }
+
+        .cell.clearing {
+            background: #ffffff !important;
+            box-shadow: 0 0 30px #ffffff !important;
+            animation: clearFlash 0.35s ease-out forwards;
+        }
+
+        @keyframes clearFlash {
+            0% { background: #ffffff; box-shadow: 0 0 30px #ffffff; }
+            30% { background: #ffffff; box-shadow: 0 0 50px #ffffff; }
+            100% { background: transparent; box-shadow: none; opacity: 0; }
+        }
+
+        .score-display {
+            margin-top: 20px;
+            color: #00f5ff;
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px #00f5ff;
+        }
+
+        .score-value {
+            font-weight: 700;
+            font-size: 1.5rem;
+            min-width: 100px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .controls {
+            margin-top: 15px;
+            color: #555;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .controls span {
+            margin: 0 10px;
+            padding: 4px 8px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background: #111;
+        }
+
+        .flash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.1s;
+        }
+
+        .flash-overlay.active {
+            opacity: 0.8;
+        }
+
+        .combo-display {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 900;
+            text-shadow: 0 0 20px #ffffff;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .combo-display.show {
+            animation: comboPopup 0.6s ease-out forwards;
+        }
+
+        @keyframes comboPopup {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+            100% { opacity: 0; transform: translate(-50%, -60%) scale(1); }
+        }
+
+        @media (max-width: 400px) {
+            .game-board {
+                grid-template-columns: repeat(10, 22px);
+                grid-template-rows: repeat(20, 22px);
+            }
+            .cell {
+                width: 22px;
+                height: 22px;
+            }
+            .title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">TETRIS</h1>
+    <div class="game-container">
+        <div class="game-board" id="board"></div>
+        <div class="combo-display" id="combo"></div>
+    </div>
+    <div class="score-display">
+        SCORE <span class="score-value" id="score">00000</span>
+    </div>
+    <div class="controls">
+        <span>← →</span> MOVE
+        <span>↑</span> ROTATE
+        <span>↓</span> SOFT DROP
+        <span>SPACE</span> HARD DROP
+    </div>
+    <div class="flash-overlay" id="flash"></div>
+
+    <script>
+        const COLS = 10;
+        const ROWS = 20;
+        const EMPTY = '';
+
+        const TETROMINOES = {
+            I: { shape: [[1,1,1,1]], color: 'I' },
+            O: { shape: [[1,1],[1,1]], color: 'O' },
+            T: { shape: [[0,1,0],[1,1,1]], color: 'T' },
+            S: { shape: [[0,1,1],[1,1,0]], color: 'S' },
+            Z: { shape: [[1,1,0],[0,1,1]], color: 'Z' },
+            J: { shape: [[1,0,0],[1,1,1]], color: 'J' },
+            L: { shape: [[0,0,1],[1,1,1]], color: 'L' }
+        };
+
+        const WALL_KICKS = {
+            normal: [
+                [[0,0], [-1,0], [-1,1], [0,-2], [-1,-2]],
+                [[0,0], [1,0], [1,-1], [0,2], [1,2]],
+                [[0,0], [1,0], [1,1], [0,-2], [1,-2]],
+                [[0,0], [-1,0], [-1,-1], [0,2], [-1,2]]
+            ],
+            I: [
+                [[0,0], [-2,0], [1,0], [-2,-1], [1,2]],
+                [[0,0], [-1,0], [2,0], [-1,2], [2,-1]],
+                [[0,0], [2,0], [-1,0], [2,1], [-1,-2]],
+                [[0,0], [1,0], [-2,0], [1,-2], [-2,1]]
+            ]
+        };
+
+        let board = [];
+        let currentPiece = null;
+        let currentPos = { x: 0, y: 0 };
+        let score = 0;
+        let gameLoop = null;
+        let lastDrop = 0;
+        let isPaused = false;
+        let isResetting = false;
+
+        const boardEl = document.getElementById('board');
+        const scoreEl = document.getElementById('score');
+        const flashEl = document.getElementById('flash');
+        const comboEl = document.getElementById('combo');
+
+        function initBoard() {
+            board = Array.from({ length: ROWS }, () => Array(COLS).fill(EMPTY));
+            boardEl.innerHTML = '';
+            for (let r = 0; r < ROWS; r++) {
+                for (let c = 0; c < COLS; c++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.dataset.row = r;
+                    cell.dataset.col = c;
+                    boardEl.appendChild(cell);
+                }
+            }
+        }
+
+        function getCell(r, c) {
+            return boardEl.querySelector(`[data-row="${r}"][data-col="${c}"]`);
+        }
+
+        function render() {
+            for (let r = 0; r < ROWS; r++) {
+                for (let c = 0; c < COLS; c++) {
+                    const cell = getCell(r, c);
+                    const filled = board[r][c];
+                    cell.className = 'cell' + (filled ? ` ${filled}` : '');
+                }
+            }
+
+            if (currentPiece && !isResetting) {
+                renderGhost();
+                renderPiece();
+            }
+
+            scoreEl.textContent = score.toString().padStart(5, '0');
+        }
+
+        function renderPiece() {
+            const { shape, color } = currentPiece;
+            for (let r = 0; r < shape.length; r++) {
+                for (let c = 0; c < shape[r].length; c++) {
+                    if (shape[r][c]) {
+                        const boardR = currentPos.y + r;
+                        const boardC = currentPos.x + c;
+                        if (boardR >= 0 && boardR < ROWS && boardC >= 0 && boardC < COLS) {
+                            const cell = getCell(boardR, boardC);
+                            cell.className = `cell ${color}`;
+                        }
+                    }
+                }
+            }
+        }
+
+        function renderGhost() {
+            let ghostY = currentPos.y;
+            while (!checkCollision(currentPiece.shape, { x: currentPos.x, y: ghostY + 1 })) {
+                ghostY++;
+            }
+            if (ghostY > currentPos.y) {
+                const { shape, color } = currentPiece;
+                for (let r = 0; r < shape.length; r++) {
+                    for (let c = 0; c < shape[r].length; c++) {
+                        if (shape[r][c]) {
+                            const boardR = ghostY + r;
+                            const boardC = currentPos.x + c;
+                            if (boardR >= 0 && boardR < ROWS && boardC >= 0 && boardC < COLS) {
+                                const cell = getCell(boardR, boardC);
+                                if (!board[boardR][boardC]) {
+                                    cell.className = `cell ghost ${color}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function spawnPiece() {
+            const types = Object.keys(TETROMINOES);
+            const type = types[Math.floor(Math.random() * types.length)];
+            const { shape, color } = TETROMINOES[type];
+
+            currentPiece = { shape: JSON.parse(JSON.stringify(shape)), color };
+            currentPos = {
+                x: Math.floor((COLS - shape[0].length) / 2),
+                y: 0
+            };
+
+            if (checkCollision(currentPiece.shape, currentPos)) {
+                resetGame();
+            }
+        }
+
+        function checkCollision(shape, pos) {
+            for (let r = 0; r < shape.length; r++) {
+                for (let c = 0; c < shape[r].length; c++) {
+                    if (shape[r][c]) {
+                        const newR = pos.y + r;
+                        const newC = pos.x + c;
+                        if (newC < 0 || newC >= COLS || newR >= ROWS) return true;
+                        if (newR >= 0 && board[newR][newC]) return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function rotatePiece(dir = 1) {
+            if (!currentPiece || currentPiece.color === 'O') return;
+
+            const { shape, color } = currentPiece;
+            const rows = shape.length;
+            const cols = shape[0].length;
+            const rotated = [];
+
+            for (let c = 0; c < cols; c++) {
+                rotated[c] = [];
+                for (let r = 0; r < rows; r++) {
+                    if (dir === 1) {
+                        rotated[c][rows - 1 - r] = shape[r][c];
+                    } else {
+                        rotated[cols - 1 - c][r] = shape[r][c];
+                    }
+                }
+            }
+
+            const kickTable = color === 'I' ? WALL_KICKS.I : WALL_KICKS.normal;
+            const rotationIndex = currentPiece.rotationIndex !== undefined ? currentPiece.rotationIndex : 0;
+            const newRotationIndex = (rotationIndex + dir + 4) % 4;
+            const kicks = kickTable[rotationIndex];
+
+            for (const [dx, dy] of kicks) {
+                const newX = currentPos.x + dx;
+                const newY = currentPos.y - dy;
+
+                if (!checkCollision(rotated, { x: newX, y: newY })) {
+                    currentPiece.shape = rotated;
+                    currentPiece.rotationIndex = newRotationIndex;
+                    currentPos.x = newX;
+                    currentPos.y = newY;
+                    render();
+                    return;
+                }
+            }
+        }
+
+        function lockPiece() {
+            const { shape, color } = currentPiece;
+            for (let r = 0; r < shape.length; r++) {
+                for (let c = 0; c < shape[r].length; c++) {
+                    if (shape[r][c]) {
+                        const boardR = currentPos.y + r;
+                        const boardC = currentPos.x + c;
+                        if (boardR >= 0) {
+                            board[boardR][boardC] = color;
+                        }
+                    }
+                }
+            }
+
+            clearLines();
+            spawnPiece();
+        }
+
+        function clearLines() {
+            const linesToClear = [];
+
+            for (let r = ROWS - 1; r >= 0; r--) {
+                if (board[r].every(cell => cell !== EMPTY)) {
+                    linesToClear.push(r);
+                }
+            }
+
+            if (linesToClear.length > 0) {
+                const combo = linesToClear.length;
+                showCombo(combo);
+
+                linesToClear.forEach(r => {
+                    for (let c = 0; c < COLS; c++) {
+                        const cell = getCell(r, c);
+                        cell.classList.add('clearing');
+                    }
+                });
+
+                setTimeout(() => {
+                    linesToClear.sort((a, b) => b - a);
+                    linesToClear.forEach(r => {
+                        board.splice(r, 1);
+                        board.unshift(Array(COLS).fill(EMPTY));
+                    });
+
+                    const points = combo === 1 ? 100 : combo === 2 ? 300 : combo === 3 ? 500 : 800;
+                    score += points * combo;
+                    render();
+                }, 350);
+            }
+        }
+
+        function showCombo(combo) {
+            if (combo > 1) {
+                comboEl.textContent = `${combo}x COMBO!`;
+                comboEl.classList.remove('show');
+                void comboEl.offsetWidth;
+                comboEl.classList.add('show');
+            }
+        }
+
+        function movePiece(dx, dy) {
+            if (!currentPiece) return false;
+            const newPos = { x: currentPos.x + dx, y: currentPos.y + dy };
+            if (!checkCollision(currentPiece.shape, newPos)) {
+                currentPos = newPos;
+                render();
+                return true;
+            }
+            return false;
+        }
+
+        function hardDrop() {
+            if (!currentPiece) return;
+            while (movePiece(0, 1)) {}
+            lockPiece();
+        }
+
+        function resetGame() {
+            if (isResetting) return;
+            isResetting = true;
+
+            flashEl.classList.add('active');
+
+            setTimeout(() => {
+                board = Array.from({ length: ROWS }, () => Array(COLS).fill(EMPTY));
+                score = 0;
+                render();
+                flashEl.classList.remove('active');
+                spawnPiece();
+                isResetting = false;
+            }, 200);
+        }
+
+        function gameUpdate(timestamp) {
+            if (!isPaused && !isResetting) {
+                if (timestamp - lastDrop > 500) {
+                    if (!movePiece(0, 1)) {
+                        lockPiece();
+                    }
+                    lastDrop = timestamp;
+                }
+            }
+            render();
+            gameLoop = requestAnimationFrame(gameUpdate);
+        }
+
+        function handleKeyDown(e) {
+            if (isResetting) return;
+
+            switch (e.key) {
+                case 'ArrowLeft':
+                    movePiece(-1, 0);
+                    e.preventDefault();
+                    break;
+                case 'ArrowRight':
+                    movePiece(1, 0);
+                    e.preventDefault();
+                    break;
+                case 'ArrowDown':
+                    movePiece(0, 1);
+                    e.preventDefault();
+                    break;
+                case 'ArrowUp':
+                    rotatePiece(1);
+                    e.preventDefault();
+                    break;
+                case 'z':
+                case 'Z':
+                    rotatePiece(-1);
+                    e.preventDefault();
+                    break;
+                case ' ':
+                    hardDrop();
+                    e.preventDefault();
+                    break;
+                case 'p':
+                case 'P':
+                    isPaused = !isPaused;
+                    e.preventDefault();
+                    break;
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        initBoard();
+        spawnPiece();
+        gameLoop = requestAnimationFrame(gameUpdate);
+    </script>
+</body>
+</html>
