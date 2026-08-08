@@ -22,9 +22,6 @@ const model = new ChatOpenAI({
   apiKey: process.env.MINIMAX_API_KEY,       // 替换为你的 API Key
   configuration: {
     baseURL: "https://api.minimax.chat/v1", // MiniMax OpenAI 兼容端点
-    defaultHeaders: {
-      "MiniMax-Group-ID": "2039652784772489962", // 必须传递 Group ID
-    },
   },
   temperature: 0.7,                     // 可选，MiniMax 温度范围 (0,1]
 });
