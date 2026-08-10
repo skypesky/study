@@ -8,9 +8,7 @@ fn main() {
     let random_guess: u32 = rand::thread_rng().gen_range(1..=1000);
     while !done {
         let user_guess: u32 = loop {
-            // 👇 在这里打印输入提示，print! 不换行，光标跟在提示后面
             print!("请输入数字：");
-            // 手动刷新缓冲区，保证提示立刻显示（print! 不会自动刷新）
             io::stdout().flush().unwrap();
             let mut input = String::new();
             io::stdin().read_line(&mut input).expect("读取失败");
