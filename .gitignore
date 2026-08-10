@@ -101,7 +101,10 @@ dist
 .dynamodb/
 
 # Rust build output
-rust/cargo-demo/target/
+rust/*/target/
+
+# OMC runtime state (sessions, replays, project memory, jobs)
+.omc/
 
 # TernJS port file
 .tern-port
