@@ -20,4 +20,5 @@ fn main() {
 
     println!("username is {}", user2.username);
     println!("email is {}", user2.email);
+    println!("email is {}", user1.email);
 }
